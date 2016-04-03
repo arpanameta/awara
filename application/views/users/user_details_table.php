@@ -20,37 +20,36 @@ License: You must have a valid license purchased only from themeforest(the above
 
     <head>
         <meta charset="utf-8" />
-        <title>Metronic | Scroller Extension</title>
+        <title>Metronic | Buttons Datatable </title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta content="" name="description" />
         <meta content="" name="author" />
         <!-- BEGIN GLOBAL MANDATORY STYLES -->
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
-        <?php
+        <?php 
         echo link_tag('assets/global/plugins/font-awesome/css/font-awesome.min.css');
         echo link_tag('assets/global/plugins/simple-line-icons/simple-line-icons.min.css');
         echo link_tag('assets/global/plugins/bootstrap/css/bootstrap.min.css');
         echo link_tag('assets/global/plugins/uniform/css/uniform.default.css');
         echo link_tag('assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css');
         // <!-- END GLOBAL MANDATORY STYLES -->
-
         // <!-- BEGIN PAGE LEVEL PLUGINS -->
         echo link_tag('assets/global/plugins/datatables/datatables.min.css');
         echo link_tag('assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css');
+        echo link_tag('assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css');
         // <!-- END PAGE LEVEL PLUGINS -->
-
         // <!-- BEGIN THEME GLOBAL STYLES -->
+        // <link href="" rel="stylesheet" id="style_components" type="text/css" />
+        echo link_tag('assets/global/css/components-md.min.css');
         echo link_tag('assets/global/css/plugins-md.min.css');
         // <!-- END THEME GLOBAL STYLES -->
-
         // <!-- BEGIN THEME LAYOUT STYLES -->
         echo link_tag('assets/layouts/layout3/css/layout.min.css');
         echo link_tag('assets/layouts/layout3/css/themes/default.min.css');
         echo link_tag('assets/layouts/layout3/css/custom.min.css');
+        // <!-- END THEME LAYOUT STYLES -->
         ?>
-        <link href="assets/global/css/components-md.min.css" rel="stylesheet" id="style_components" type="text/css" />
-        <!-- END THEME LAYOUT STYLES -->
         <link rel="shortcut icon" href="favicon.ico" /> </head>
     <!-- END HEAD -->
 
@@ -62,7 +61,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <div class="container">
                     <!-- BEGIN LOGO -->
                     <div class="page-logo">
-                        <a href="<?php base_url(); ?>admin-page">
+                        <a href="<?php echo base_url(); ?>users-table">
                             <img src="assets/layouts/layout3/img/logo-default.jpg" alt="logo" class="logo-default">
                         </a>
                     </div>
@@ -73,6 +72,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     <!-- BEGIN TOP NAVIGATION MENU -->
                     <div class="top-menu">
                         <ul class="nav navbar-nav pull-right">
+                            
                             <!-- BEGIN USER LOGIN DROPDOWN -->
                             <li class="dropdown dropdown-user dropdown-dark">
                                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
@@ -121,13 +121,25 @@ License: You must have a valid license purchased only from themeforest(the above
             <!-- BEGIN HEADER MENU -->
             <div class="page-header-menu">
                 <div class="container">
+                    <!-- BEGIN HEADER SEARCH BOX -->
+                    <form class="search-form" action="page_general_search.html" method="GET">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search" name="query">
+                            <span class="input-group-btn">
+                                <a href="javascript:;" class="btn submit">
+                                    <i class="icon-magnifier"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </form>
+                    <!-- END HEADER SEARCH BOX -->
                     <!-- BEGIN MEGA MENU -->
                     <!-- DOC: Apply "hor-menu-light" class after the "hor-menu" class below to have a horizontal menu with white background -->
                     <!-- DOC: Remove data-hover="dropdown" and data-close-others="true" attributes below to disable the dropdown opening on mouse hover -->
                     <div class="hor-menu  ">
                         <ul class="nav navbar-nav">
-                            <li class="menu-dropdown classic-menu-dropdown active ">
-                                <a href="<?php base_url(); ?>admin-page"> Users
+                            <li class="menu-dropdown classic-menu-dropdown active">
+                                <a href="<?php echo base_url(); ?>users-table"> Users
                                     <span class="arrow"></span>
                                 </a>
                             </li>
@@ -363,7 +375,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </li>
                                 </ul>
                             </li>
-                            <li class="menu-dropdown classic-menu-dropdown ">
+                            <li class="menu-dropdown classic-menu-dropdown active">
                                 <a href="javascript:;"> More
                                     <span class="arrow"></span>
                                 </a>
@@ -420,7 +432,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         </ul>
                                     </li>
                                     <li class="dropdown-submenu active">
-                                        <a href="javascript:;" class="nav-link nav-toggle ">
+                                        <a href="javascript:;" class="nav-link nav-toggle active">
                                             <i class="icon-briefcase"></i> Tables
                                             <span class="arrow open"></span>
                                         </a>
@@ -446,7 +458,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     <li class="">
                                                         <a href="table_datatables_managed.html" class="nav-link "> Managed Datatables </a>
                                                     </li>
-                                                    <li class="">
+                                                    <li class="active">
                                                         <a href="table_datatables_buttons.html" class="nav-link "> Buttons Extension </a>
                                                     </li>
                                                     <li class="">
@@ -455,7 +467,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     <li class="">
                                                         <a href="table_datatables_rowreorder.html" class="nav-link "> Rowreorder Extension </a>
                                                     </li>
-                                                    <li class="active">
+                                                    <li class="">
                                                         <a href="table_datatables_scroller.html" class="nav-link "> Scroller Extension </a>
                                                     </li>
                                                     <li class="">
@@ -827,7 +839,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         <!-- BEGIN PAGE BREADCRUMBS -->
                         <ul class="page-breadcrumb breadcrumb">
                             <li>
-                                <a href="<?php base_url();?>admin-page">Home</a>
+                                <a href="<?php echo base_url(); ?>users-table">Home</a>
                                 <i class="fa fa-circle"></i>
                             </li>
                             <li>
@@ -835,43 +847,42 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <i class="fa fa-circle"></i>
                             </li>
                             <li>
-                                <a href="#">Table</a>
-                                <i class="fa fa-circle"></i>
-                            </li>
-                            <li>
-                                <span>Details</span>
+                                <span>Datatables</span>
                             </li>
                         </ul>
                         <!-- END PAGE BREADCRUMBS -->
                         <!-- BEGIN PAGE CONTENT INNER -->
-                        <div class="page-content-inner">                                   
+                        <div class="page-content-inner">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <!-- END EXAMPLE TABLE PORTLET-->
                                     <!-- BEGIN EXAMPLE TABLE PORTLET-->
-                                    <div class="portlet box green">
+                                    <div class="portlet light ">
                                         <div class="portlet-title">
-                                            <div class="caption">
-                                                <i class="fa fa-globe"></i>Server-side processing(5,000,000 rows) </div>
-                                            <div class="tools"> </div>
+                                            <div class="caption font-dark">
+                                                <i class="icon-settings font-dark"></i>
+                                                <span class="caption-subject bold uppercase">Users</span>
+                                            </div>
                                         </div>
                                         <div class="portlet-body">
-                                            <table class="table table-striped table-bordered table-hover order-column" id="sample_2">
-                                                <thead>
+                                            <table class="table table-striped table-bordered table-hover" id="sample_1">
+                                                <thead >
                                                     <tr>
-                                                        <th>ID</th>
-                                                        <th>First name</th>
-                                                        <th>Last name</th>
-                                                        <th>ZIP / Post code</th>
-                                                        <th>Country</th>
+                                                        <th> S. No. </th>
+                                                        <th> First Name </th>
+                                                        <th> Last Name </th>
+                                                        <th> Email </th>
+                                                        <th> Status </th>
+                                                        <th> View </th>
                                                     </tr>
                                                 </thead>
+                                                <tbody id="users_data_json">
+                                                </tbody>
                                             </table>
                                         </div>
                                     </div>
                                     <!-- END EXAMPLE TABLE PORTLET-->
                                 </div>
-                            </div>                            
+                            </div>
                         </div>
                         <!-- END PAGE CONTENT INNER -->
                     </div>
@@ -972,22 +983,29 @@ License: You must have a valid license purchased only from themeforest(the above
         echo script_tag('assets/global/scripts/datatable.js');
         echo script_tag('assets/global/plugins/datatables/datatables.min.js');
         echo script_tag('assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js');
+        echo script_tag('assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js');
         // <!-- END PAGE LEVEL PLUGINS -->
-
+        
         // <!-- BEGIN THEME GLOBAL SCRIPTS -->
         echo script_tag('assets/global/scripts/app.min.js');
         // <!-- END THEME GLOBAL SCRIPTS -->
-
+        
         // <!-- BEGIN PAGE LEVEL SCRIPTS -->
-        echo script_tag('assets/pages/scripts/table-datatables-scroller.min.js');
+        // echo script_tag('assets/pages/scripts/table-datatables-buttons.min.js');
         // <!-- END PAGE LEVEL SCRIPTS -->
-
+        
         // <!-- BEGIN THEME LAYOUT SCRIPTS -->
         echo script_tag('assets/layouts/layout3/scripts/layout.min.js');
         echo script_tag('assets/layouts/layout3/scripts/demo.min.js');
         echo script_tag('assets/layouts/global/scripts/quick-sidebar.min.js');
         // <!-- END THEME LAYOUT SCRIPTS -->
+        echo script_tag('assets/js/users/user_details_table.js');
         ?>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                new AWARA.Admin("<?php echo base_url(); ?>");
+            });
+        </script>
     </body>
 
 </html>

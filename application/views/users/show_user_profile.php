@@ -38,8 +38,9 @@ License: You must have a valid license purchased only from themeforest(the above
         // <!-- END PAGE LEVEL PLUGINS -->
         // <!-- BEGIN THEME GLOBAL STYLES -->
         ?>
-        <link href="../assets/global/css/components-md.min.css" rel="stylesheet" id="style_components" type="text/css" />
+        <!-- <link href="" rel="stylesheet" id="style_components" type="text/css" /> -->
         <?php
+        echo link_tag('assets/global/css/components-md.min.css');
         // <!-- END THEME GLOBAL STYLES -->
         // <!-- BEGIN THEME LAYOUT STYLES 
         echo link_tag('assets/global/css/plugins-md.min.css');
@@ -59,8 +60,8 @@ License: You must have a valid license purchased only from themeforest(the above
                 <div class="container">
                     <!-- BEGIN LOGO -->
                     <div class="page-logo">
-                        <a href="index.html">
-                            <img src="../assets/layouts/layout3/img/logo-default.jpg" alt="logo" class="logo-default">
+                        <a href="<?php echo base_url(); ?>users-table">
+                            <img src="<?php echo base_url('assets/layouts/layout3/img/logo-default.jpg'); ?>" alt="logo" class="logo-default">
                         </a>
                     </div>
                     <!-- END LOGO -->
@@ -77,7 +78,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <!-- BEGIN USER LOGIN DROPDOWN -->
                             <li class="dropdown dropdown-user dropdown-dark">
                                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                    <img alt="" class="img-circle" src="../assets/layouts/layout3/img/avatar9.jpg">
+                                    <img alt="" class="img-circle" src="assets/layouts/layout3/img/avatar9.jpg">
                                     <span class="username username-hide-mobile">Nick</span>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-default">
@@ -146,7 +147,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     <div class="hor-menu  ">
                         <ul class="nav navbar-nav">
                             <li class="menu-dropdown classic-menu-dropdown ">
-                                <a href="<?php echo base_url();?>admin-page"> Users
+                                <a href="<?php echo base_url(); ?>users-table"> Users
                                     <span class="arrow"></span>
                                 </a>
                             </li>
@@ -1000,14 +1001,14 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <div class="media-status">
                                             <span class="badge badge-success">8</span>
                                         </div>
-                                        <img class="media-object" src="../assets/layouts/layout/img/avatar3.jpg" alt="...">
+                                        <img class="media-object" src="assets/layouts/layout/img/avatar3.jpg" alt="...">
                                         <div class="media-body">
                                             <h4 class="media-heading">Bob Nilson</h4>
                                             <div class="media-heading-sub"> Project Manager </div>
                                         </div>
                                     </li>
                                     <li class="media">
-                                        <img class="media-object" src="../assets/layouts/layout/img/avatar1.jpg" alt="...">
+                                        <img class="media-object" src="assets/layouts/layout/img/avatar1.jpg" alt="...">
                                         <div class="media-body">
                                             <h4 class="media-heading">Nick Larson</h4>
                                             <div class="media-heading-sub"> Art Director </div>
@@ -1017,14 +1018,14 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <div class="media-status">
                                             <span class="badge badge-danger">3</span>
                                         </div>
-                                        <img class="media-object" src="../assets/layouts/layout/img/avatar4.jpg" alt="...">
+                                        <img class="media-object" src="assets/layouts/layout/img/avatar4.jpg" alt="...">
                                         <div class="media-body">
                                             <h4 class="media-heading">Deon Hubert</h4>
                                             <div class="media-heading-sub"> CTO </div>
                                         </div>
                                     </li>
                                     <li class="media">
-                                        <img class="media-object" src="../assets/layouts/layout/img/avatar2.jpg" alt="...">
+                                        <img class="media-object" src="assets/layouts/layout/img/avatar2.jpg" alt="...">
                                         <div class="media-body">
                                             <h4 class="media-heading">Ella Wong</h4>
                                             <div class="media-heading-sub"> CEO </div>
@@ -1037,7 +1038,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <div class="media-status">
                                             <span class="badge badge-warning">2</span>
                                         </div>
-                                        <img class="media-object" src="../assets/layouts/layout/img/avatar6.jpg" alt="...">
+                                        <img class="media-object" src="assets/layouts/layout/img/avatar6.jpg" alt="...">
                                         <div class="media-body">
                                             <h4 class="media-heading">Lara Kunis</h4>
                                             <div class="media-heading-sub"> CEO, Loop Inc </div>
@@ -1048,7 +1049,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <div class="media-status">
                                             <span class="label label-sm label-success">new</span>
                                         </div>
-                                        <img class="media-object" src="../assets/layouts/layout/img/avatar7.jpg" alt="...">
+                                        <img class="media-object" src="assets/layouts/layout/img/avatar7.jpg" alt="...">
                                         <div class="media-body">
                                             <h4 class="media-heading">Ernie Kyllonen</h4>
                                             <div class="media-heading-sub"> Project Manager,
@@ -1056,7 +1057,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         </div>
                                     </li>
                                     <li class="media">
-                                        <img class="media-object" src="../assets/layouts/layout/img/avatar8.jpg" alt="...">
+                                        <img class="media-object" src="assets/layouts/layout/img/avatar8.jpg" alt="...">
                                         <div class="media-body">
                                             <h4 class="media-heading">Lisa Stone</h4>
                                             <div class="media-heading-sub"> CTO, Keort Inc </div>
@@ -1067,14 +1068,14 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <div class="media-status">
                                             <span class="badge badge-success">7</span>
                                         </div>
-                                        <img class="media-object" src="../assets/layouts/layout/img/avatar9.jpg" alt="...">
+                                        <img class="media-object" src="assets/layouts/layout/img/avatar9.jpg" alt="...">
                                         <div class="media-body">
                                             <h4 class="media-heading">Deon Portalatin</h4>
                                             <div class="media-heading-sub"> CFO, H&D LTD </div>
                                         </div>
                                     </li>
                                     <li class="media">
-                                        <img class="media-object" src="../assets/layouts/layout/img/avatar10.jpg" alt="...">
+                                        <img class="media-object" src="assets/layouts/layout/img/avatar10.jpg" alt="...">
                                         <div class="media-body">
                                             <h4 class="media-heading">Irina Savikova</h4>
                                             <div class="media-heading-sub"> CEO, Tizda Motors Inc </div>
@@ -1084,7 +1085,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <div class="media-status">
                                             <span class="badge badge-danger">4</span>
                                         </div>
-                                        <img class="media-object" src="../assets/layouts/layout/img/avatar11.jpg" alt="...">
+                                        <img class="media-object" src="assets/layouts/layout/img/avatar11.jpg" alt="...">
                                         <div class="media-body">
                                             <h4 class="media-heading">Maria Gomez</h4>
                                             <div class="media-heading-sub"> Manager, Infomatic Inc </div>
@@ -1101,7 +1102,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </div>
                                     <div class="page-quick-sidebar-chat-user-messages">
                                         <div class="post out">
-                                            <img class="avatar" alt="" src="../assets/layouts/layout/img/avatar3.jpg" />
+                                            <img class="avatar" alt="" src="assets/layouts/layout/img/avatar3.jpg" />
                                             <div class="message">
                                                 <span class="arrow"></span>
                                                 <a href="javascript:;" class="name">Bob Nilson</a>
@@ -1110,7 +1111,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </div>
                                         </div>
                                         <div class="post in">
-                                            <img class="avatar" alt="" src="../assets/layouts/layout/img/avatar2.jpg" />
+                                            <img class="avatar" alt="" src="assets/layouts/layout/img/avatar2.jpg" />
                                             <div class="message">
                                                 <span class="arrow"></span>
                                                 <a href="javascript:;" class="name">Ella Wong</a>
@@ -1119,7 +1120,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </div>
                                         </div>
                                         <div class="post out">
-                                            <img class="avatar" alt="" src="../assets/layouts/layout/img/avatar3.jpg" />
+                                            <img class="avatar" alt="" src="assets/layouts/layout/img/avatar3.jpg" />
                                             <div class="message">
                                                 <span class="arrow"></span>
                                                 <a href="javascript:;" class="name">Bob Nilson</a>
@@ -1128,7 +1129,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </div>
                                         </div>
                                         <div class="post in">
-                                            <img class="avatar" alt="" src="../assets/layouts/layout/img/avatar2.jpg" />
+                                            <img class="avatar" alt="" src="assets/layouts/layout/img/avatar2.jpg" />
                                             <div class="message">
                                                 <span class="arrow"></span>
                                                 <a href="javascript:;" class="name">Ella Wong</a>
@@ -1137,7 +1138,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </div>
                                         </div>
                                         <div class="post out">
-                                            <img class="avatar" alt="" src="../assets/layouts/layout/img/avatar3.jpg" />
+                                            <img class="avatar" alt="" src="assets/layouts/layout/img/avatar3.jpg" />
                                             <div class="message">
                                                 <span class="arrow"></span>
                                                 <a href="javascript:;" class="name">Bob Nilson</a>
@@ -1146,7 +1147,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </div>
                                         </div>
                                         <div class="post in">
-                                            <img class="avatar" alt="" src="../assets/layouts/layout/img/avatar2.jpg" />
+                                            <img class="avatar" alt="" src="assets/layouts/layout/img/avatar2.jpg" />
                                             <div class="message">
                                                 <span class="arrow"></span>
                                                 <a href="javascript:;" class="name">Ella Wong</a>
@@ -1155,7 +1156,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </div>
                                         </div>
                                         <div class="post out">
-                                            <img class="avatar" alt="" src="../assets/layouts/layout/img/avatar3.jpg" />
+                                            <img class="avatar" alt="" src="assets/layouts/layout/img/avatar3.jpg" />
                                             <div class="message">
                                                 <span class="arrow"></span>
                                                 <a href="javascript:;" class="name">Bob Nilson</a>
@@ -1164,7 +1165,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </div>
                                         </div>
                                         <div class="post in">
-                                            <img class="avatar" alt="" src="../assets/layouts/layout/img/avatar2.jpg" />
+                                            <img class="avatar" alt="" src="assets/layouts/layout/img/avatar2.jpg" />
                                             <div class="message">
                                                 <span class="arrow"></span>
                                                 <a href="javascript:;" class="name">Ella Wong</a>
@@ -1173,7 +1174,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </div>
                                         </div>
                                         <div class="post out">
-                                            <img class="avatar" alt="" src="../assets/layouts/layout/img/avatar3.jpg" />
+                                            <img class="avatar" alt="" src="assets/layouts/layout/img/avatar3.jpg" />
                                             <div class="message">
                                                 <span class="arrow"></span>
                                                 <a href="javascript:;" class="name">Bob Nilson</a>
@@ -1583,8 +1584,8 @@ License: You must have a valid license purchased only from themeforest(the above
         <!-- END INNER FOOTER -->
         <!-- END FOOTER -->
         <!--[if lt IE 9]>
-<script src="../assets/global/plugins/respond.min.js"></script>
-<script src="../assets/global/plugins/excanvas.min.js"></script> 
+<script src="assets/global/plugins/respond.min.js"></script>
+<script src="assets/global/plugins/excanvas.min.js"></script> 
 <![endif]-->
         <!-- BEGIN CORE PLUGINS -->
         <?php

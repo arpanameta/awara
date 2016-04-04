@@ -55,6 +55,12 @@ $route['home/user_registration'] ='Home/user_registration';
 $route['users-table']='Users_control/index';
 $route['users-table/show-user-details']='Users_control/show_user_details';
 
+$route['city-table']='City_control/index';
+$route['city-table/show-city-details']='City_control/show_city_details';
+
+$route['hotels-table']='Hotels_control/index';
+$route['hotels-table/show-hotel-details']='Hotels_control/show_hotel_details';
+
 $route['admin/users/(:num)']='Users_control/show_user_details_xyz/$1';
 
 $route['users-table/show-user-profile']='Users_control/show_user_profile';

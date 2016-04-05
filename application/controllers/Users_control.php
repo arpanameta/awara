@@ -40,9 +40,10 @@ class Users_control extends CI_Controller {
 	public function show_user_details_xyz($id)
 	{
 		// echo $id;
+		$data['id']=$id;
 		$this->load->helper('url');
 		$this->load->helper('html');
-		$this->load->view('users/show_user_specific_profile');
+		$this->load->view('users/show_user_specific_profile',$data);
 	}
 
 }
